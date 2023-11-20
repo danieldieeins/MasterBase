@@ -19,22 +19,24 @@ public class PlayerDamageListener implements Listener {
         if(Main.isStarted) {
             if (e.getEntity() instanceof Player p) {
                 if (e.getDamager() instanceof Player t) {
+                    User tU = Main.getUser(t.getUniqueId());
                     if(Main.isProtected) {
                         e.setCancelled(true);
                         return;
                     }
                     User u = Main.getUser(p.getUniqueId());
-                    u.setHit(1);
-                    new Countdown(5, Main.getInstance()) {
-                        @Override
-                        public void count(int current) {
-                            if(current==1) {
-                                u.setHit(0);
+                    if(!u.getTeam().getName().equals(tU.getTeam().getName())) {
+                        u.setHit(1);
+                        new Countdown(5, Main.getInstance()) {
+                            @Override
+                            public void count(int current) {
+                                if (current == 1) {
+                                    u.setHit(0);
+                                }
                             }
-                        }
-                    }.start();
+                        }.start();
+                    }
                     int i = Main.countdowns.get(p.getUniqueId()).getTime();
-                    User tU = Main.getUser(t.getUniqueId());
                     if(!u.getTeam().getName().equals(tU.getTeam().getName())) {
                         if (i < 120) {
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 40, 40);
