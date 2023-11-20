@@ -1,0 +1,11 @@
+name: MasterBase
+version: '${project.version}'
+authors:
+  - DannyTheOne
+author: nerotvlive
+main: live.nerotv.masterbase.Main
+api-version: '1.20'
+commands:
+  masterborder:
+    aliases: [mb]
+  start:
