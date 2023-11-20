@@ -1,2 +1,2 @@
-# MasterBase [1.0.2]
+# MasterBase `1.0.2`
 PvP Masters plugin
