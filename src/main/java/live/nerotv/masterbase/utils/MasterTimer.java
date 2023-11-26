@@ -47,6 +47,10 @@ public class MasterTimer {
                     }
                     setWorldborder(Main.config.getCFG().getDouble("border.day" + days + "." + time + ".size"), bTime);
                 }
+                if(time.equals("00-01")) {
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"save-all");
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"stop");
+                }
             } else {
                 setWorldborder(41,0,false);
                 world.setDifficulty(Difficulty.PEACEFUL);

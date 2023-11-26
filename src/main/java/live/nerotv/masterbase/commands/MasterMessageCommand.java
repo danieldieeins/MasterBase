@@ -19,7 +19,7 @@ public class MasterMessageCommand implements CommandExecutor {
                 for(int i=0;i<args.length;i++) {
                     m=m+args[i]+" ";
                 }
-                System.out.println("§e§bMasterChat§r§8: §7"+m);
+                s.sendMessage("§e§bMasterChat§8: §7"+m);
             }
         } else {
             p.performCommand("nichtexis");
