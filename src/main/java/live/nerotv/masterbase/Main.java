@@ -3,6 +3,7 @@ package live.nerotv.masterbase;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import live.nerotv.masterbase.commands.MasterBorderCommand;
+import live.nerotv.masterbase.commands.MasterMessageCommand;
 import live.nerotv.masterbase.commands.StartCommand;
 import live.nerotv.masterbase.listeners.*;
 import live.nerotv.masterbase.objects.Team;
@@ -67,6 +68,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(),this);
         Bukkit.getPluginManager().registerEvents(new PlayerChatListener(),this);
         getCommand("masterborder").setExecutor(new MasterBorderCommand());
+        getCommand("mastermessage").setExecutor(new MasterMessageCommand());
         getCommand("start").setExecutor(new StartCommand());
         Bukkit.getWorlds().get(0).setSpawnLocation(new Location(Bukkit.getWorlds().get(0),0.5,97,0.5));
         Bukkit.getWorlds().get(1).setSpawnLocation(new Location(Bukkit.getWorlds().get(1),0.5,97,0.5));

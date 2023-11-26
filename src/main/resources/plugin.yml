@@ -9,3 +9,5 @@ commands:
   masterborder:
     aliases: [mb]
   start:
+  mastermessage:
+    aliases: [mm,mc,masterchat]
