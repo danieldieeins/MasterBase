@@ -1,3 +1,3 @@
-# MasterBase `1.0.5`
+# MasterBase `1.0.6`
 PvP Masters plugin
 >README incomplete

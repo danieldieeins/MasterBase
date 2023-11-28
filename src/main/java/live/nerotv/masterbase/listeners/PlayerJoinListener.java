@@ -30,8 +30,8 @@ public class PlayerJoinListener implements Listener {
         Storage storage = new Storage("plugins/MasterBase/players/" + e.getUniqueId() + ".yml");
         String time[] = Main.getTime(false).split("-", 2);
         int i = Integer.parseInt(time[0]);
-        if(i<13||i>20) {
-            e.setKickMessage("§cDer Server ist nur zwischen 13 und 21 Uhr betretbar§8!");
+        if(i<16||i>20) {
+            e.setKickMessage("§cDer Server ist nur zwischen 16 und 21 Uhr betretbar§8!");
             e.setResult(PlayerPreLoginEvent.Result.KICK_OTHER);
             return;
         }
